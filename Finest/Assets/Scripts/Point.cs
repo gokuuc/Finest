@@ -6,10 +6,16 @@ using UnityEngine.UI;
 public class Point : MonoBehaviour
 {
 
-    static int point;
+    public static int point;
+
+    private int start = 0;
 
     [SerializeField] Text textpoint;
 
+    private void Start()
+    {
+        point = start;
+    }
 
     private void OnTriggerEnter(Collider other)
     {
